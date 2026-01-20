@@ -1,0 +1,402 @@
+/* Loan Calculator Pro - Professional & Modern Styles */
+.lcp-calculator-wrapper {
+    max-width: 900px;
+    margin: 3rem auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    padding: 0 1rem;
+}
+
+.lcp-calculator-container {
+    background: linear-gradient(135deg, #0f4c75 0%, #1b6ca8 100%);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(15, 76, 117, 0.15);
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.lcp-calculator-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+    animation: pulse 20s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.08); opacity: 0.2; }
+}
+
+.lcp-calculator-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 2.5rem 0;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    letter-spacing: -0.3px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.lcp-calculator-form {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.lcp-form-group {
+    margin-bottom: 1.8rem;
+}
+
+.lcp-form-group label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+}
+
+.lcp-input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
+    border: 2px solid #e8edf4;
+    border-radius: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+    background: #ffffff;
+    font-weight: 500;
+    color: #1a202c;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.lcp-input:hover {
+    border-color: #c5d2e0;
+}
+
+.lcp-input:focus {
+    outline: none;
+    border-color: #2a8cff;
+    box-shadow: 0 0 0 4px rgba(42, 140, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.lcp-help-text {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.lcp-term-btn {
+    background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+    border: 2px solid #dee2e6;
+    padding: 0.6rem 1.2rem;
+    margin: 0.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
+    transition: all 0.25s ease;
+}
+
+.lcp-term-btn:hover {
+    background: linear-gradient(135deg, #2a8cff 0%, #1b6ca8 100%);
+    border-color: #2a8cff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(42, 140, 255, 0.25);
+}
+
+.lcp-term-btn.active {
+    background: linear-gradient(135deg, #1b6ca8 0%, #0f4c75 100%);
+    border-color: #1b6ca8;
+    color: white;
+    box-shadow: 0 4px 12px rgba(27, 108, 168, 0.3);
+}
+
+.lcp-calculate-btn {
+    width: 100%;
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.25);
+    text-transform: none;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+}
+
+.lcp-calculate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(40, 167, 69, 0.35);
+    background: linear-gradient(135deg, #218838 0%, #1ba87e 100%);
+}
+
+.lcp-calculate-btn:active {
+    transform: translateY(-1px);
+}
+
+.lcp-calculate-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+    background: #6c757d;
+}
+
+.lcp-loader {
+    display: inline-block;
+}
+
+.lcp-results {
+    margin-top: 2rem;
+    animation: slideIn 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lcp-results h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 2rem 0;
+    text-align: center;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.lcp-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.lcp-result-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.93) 100%);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 14px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.lcp-result-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.12);
+    border-color: rgba(255,255,255,0.6);
+}
+
+.lcp-result-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.75rem;
+}
+
+.lcp-result-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0f4c75 0%, #28a745 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.lcp-amortization-section {
+    margin-top: 2.5rem;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.lcp-amortization-section h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 1.5rem 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.lcp-table-container {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8edf4;
+}
+
+.lcp-amortization-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 12px;
+}
+
+.lcp-amortization-table thead {
+    background: linear-gradient(135deg, #0f4c75 0%, #1b6ca8 100%);
+    color: white;
+}
+
+.lcp-amortization-table th,
+.lcp-amortization-table td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.lcp-amortization-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-size: 0.85rem;
+    border-bottom: none;
+}
+
+.lcp-amortization-table tbody tr {
+    transition: all 0.15s ease;
+}
+
+.lcp-amortization-table tbody tr:hover {
+    background: linear-gradient(90deg, rgba(42, 140, 255, 0.03) 0%, rgba(27, 108, 168, 0.03) 100%);
+}
+
+.lcp-amortization-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.lcp-export-btn {
+    background: linear-gradient(135deg, #0f4c75 0%, #1b6ca8 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 15px rgba(15, 76, 117, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.lcp-export-btn:hover {
+    background: linear-gradient(135deg, #0d3c61 0%, #155987 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(15, 76, 117, 0.3);
+}
+
+.lcp-error-message {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 1px solid #ffc107;
+    color: #856404;
+    padding: 1.25rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .lcp-calculator-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .lcp-calculator-title {
+        font-size: 2rem;
+    }
+    
+    .lcp-calculator-form {
+        padding: 1.5rem;
+    }
+    
+    .lcp-results-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .lcp-result-value {
+        font-size: 1.8rem;
+    }
+    
+    .lcp-amortization-section {
+        padding: 1.5rem;
+    }
+    
+    .lcp-amortization-table th,
+    .lcp-amortization-table td {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .lcp-calculate-btn,
+    .lcp-export-btn,
+    .lcp-term-btn {
+        display: none !important;
+    }
+    
+    .lcp-calculator-container {
+        box-shadow: none !important;
+        background: rgb(67, 68, 72) !important;
+        border: 1px solid #ccc !important;
+    }
+    
+    .lcp-calculator-title,
+    .lcp-results h3 {
+        color: #000 !important;
+    }
+    
+    .lcp-result-card {
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+    }
+    
+    .lcp-result-value {
+        -webkit-text-fill-color: #000 !important;
+        color: #000 !important;
+    }
+}
