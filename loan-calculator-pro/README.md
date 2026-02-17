@@ -100,20 +100,16 @@ CREATE TABLE wp_loan_calculations (
 ```
 
 ### **Code Architecture**
-
 ```
 loan-calculator-pro/
-├── loan-calculator-pro.php      # Main plugin file
+├── loan-calculator-pro.php    # Main plugin file (all core logic)
 ├── assets/
-│   ├── css/                     # Frontend & admin styles
-│   └── js/                      # Frontend & admin scripts
-├── includes/
-│   ├── class-database.php       # Database operations
-│   ├── class-calculator.php     # Financial calculations
-│   ├── class-shortcode.php      # Shortcode handler
-│   └── class-admin.php          # Admin interface
-├── templates/                   # View templates
-└── api/                         # REST API endpoints
+│   ├── css/                   # Frontend & admin styles
+│   └── js/                    # Frontend & admin scripts
+└── templates/
+    ├── calculator-form.php    # Calculator UI
+    ├── admin-dashboard.php    # Admin stats page
+    └── admin-settings.php     # Settings page
 ```
 
 ---
@@ -157,17 +153,17 @@ Planned enhancements:
 
 ## **About Me**
 
-I'm **Moroesi**, a software developer from South Africa specializing in financial technology solutions. With professional experience building full-stack loan management systems, I created this plugin to demonstrate my ability to develop complete, production-ready WordPress solutions.
+In my day job I build and maintain production loan 
+management systems with PHP, MySQL and payment gateway integrations 
+- so building a loan calculator felt like familiar territory, 
+just in a different environment.
 
-This project showcases my skills in:
-- Implementing complex financial calculations
-- Creating intuitive user interfaces for financial tools
-- Building secure, scalable WordPress plugins
-- Integrating backend logic with frontend user experiences
+This plugin was my first serious dive into WordPress development 
+and I genuinely enjoyed figuring out how the hooks system works.
 
-**GitHub:** github.com/moroesiR  
-**Email:** mavundlamoroesi@gmail.com
-
+**GitHub:** [github.com/MoroesiR](https://github.com/MoroesiR)  
+**Email:** mavundlamoroesi@gmail.com  
+**Open to:** Remote software development opportunities
 ---
 
 ## **License**
@@ -175,3 +171,4 @@ This project showcases my skills in:
 GPL v2 - Same as WordPress. Feel free to use, modify, or improve it!
 
 ---
+
