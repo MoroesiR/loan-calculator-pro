@@ -153,10 +153,10 @@ Planned enhancements:
 
 ## **About Me**
 
-In my day job I build and maintain production loan 
-management systems with PHP, MySQL and payment gateway integrations 
-- so building a loan calculator felt like familiar territory, 
-just in a different environment.
+I'm **Moroesi Ramodupi**, a junior software developer from Durban, South Africa.
+In my day job I build and maintain production loan management systems 
+with PHP, MySQL and payment gateway integrations - so building a loan 
+calculator felt like familiar territory, just in a different environment.
 
 This plugin was my first serious dive into WordPress development 
 and I genuinely enjoyed figuring out how the hooks system works.
@@ -171,4 +171,5 @@ and I genuinely enjoyed figuring out how the hooks system works.
 GPL v2 - Same as WordPress. Feel free to use, modify, or improve it!
 
 ---
+
 
