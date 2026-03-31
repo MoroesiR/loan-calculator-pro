@@ -161,9 +161,9 @@ calculator felt like familiar territory, just in a different environment.
 This plugin was my first serious dive into WordPress development 
 and I genuinely enjoyed figuring out how the hooks system works.
 
-**GitHub:** [github.com/MoroesiR](https://github.com/MoroesiR)  
-**Email:** mavundlamoroesi@gmail.com  
-**Open to:** Remote software development opportunities
+GitHub:** [github.com/MoroesiR](https://github.com/MoroesiR)  
+Email:** moroesiramodupi@gmail.com  
+Open to:** Remote software development opportunities
 ---
 
 ## **License**
